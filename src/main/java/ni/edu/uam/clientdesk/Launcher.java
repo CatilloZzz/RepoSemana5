@@ -12,7 +12,7 @@ public class Launcher extends Application {
 
         FXMLLoader loader = new FXMLLoader(
                 Launcher.class.getResource(
-                        "/ni/edu/uam/clientdesk/fxml/Login.fxml"
+                        "/ni/edu/uam/clientdesk/fxml/Login-view.fxml"
                 )
         );
 

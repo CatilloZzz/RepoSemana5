@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class ScreenNavigator {
 
-    private static final String PANTALLA_PRINCIPAL = "/ni/edu/uam/clientdesk/fxml/Main.fxml";
+    private static final String PANTALLA_PRINCIPAL = "/ni/edu/uam/clientdesk/fxml/Main-view.fxml";
     private static final String PANTALLA_REGISTRO_CLIENTE = "/ni/edu/uam/clientdesk/fxml/RegistroCliente.fxml";
     private static final String PANTALLA_CONSULTA_CLIENTES = "/ni/edu/uam/clientdesk/fxml/ConsultaClientes.fxml";
 
