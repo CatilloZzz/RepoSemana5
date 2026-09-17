@@ -9,24 +9,24 @@ import java.io.IOException;
 
 public class ScreenNavigator {
 
-    private static final String CARPETA_FXML = "/ni/edu/uam/clientdesk/fxml/";
+    private static final String PANTALLA_PRINCIPAL = "/ni/edu/uam/clientdesk/fxml/Main.fxml";
 
-    public static <T> T cambiarEscena(Stage stageActual, String nombreFxml, String titulo) throws IOException {
-        FXMLLoader loader = new FXMLLoader(ScreenNavigator.class.getResource(CARPETA_FXML + nombreFxml));
-        Parent root = loader.load();
-        stageActual.setScene(new Scene(root));
-        stageActual.setTitle(titulo);
-        stageActual.show();
-        return loader.getController();
-    }
+    public static void cargarPantallaPrincipal(Stage stageActual) {
+        try {
+            FXMLLoader loader = new FXMLLoader(ScreenNavigator.class.getResource(PANTALLA_PRINCIPAL));
+            Parent root = loader.load();
 
-    public static <T> T abrirVentana(String nombreFxml, String titulo) throws IOException {
-        FXMLLoader loader = new FXMLLoader(ScreenNavigator.class.getResource(CARPETA_FXML + nombreFxml));
-        Parent root = loader.load();
-        Stage nuevoStage = new Stage();
-        nuevoStage.setScene(new Scene(root));
-        nuevoStage.setTitle(titulo);
-        nuevoStage.show();
-        return loader.getController();
+            Scene scene = new Scene(root);
+            stageActual.setScene(scene);
+            stageActual.setTitle("ClientDesk - Sistema de gestión de clientes");
+
+            stageActual.setWidth(1000);
+            stageActual.setHeight(650);
+            stageActual.centerOnScreen();
+
+        } catch (IOException e) {
+            System.err.println("Error al cargar la pantalla principal: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }

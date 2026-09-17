@@ -15,7 +15,6 @@ public class DataStore {
         clientes = FXCollections.observableArrayList();
         usuarios = FXCollections.observableArrayList();
 
-        // Usuario de prueba, ya que no se requiere base de datos.
         usuarios.add(new User("admin", "1234"));
     }
 
