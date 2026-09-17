@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            prefWidth="1000.0"
+            prefHeight="650.0"
+            style="-fx-background-color: #f4f6f8;">
+
+    <top>
+
+        <VBox>
+
+            <children>
+
+                <MenuBar style="-fx-background-color: #ffffff;
+                                 -fx-border-color: #d9dee5;
+                                 -fx-border-width: 0 0 1 0;">
+
+                    <menus>
+
+                        <Menu text="Sistema">
+
+                            <items>
+
+                                <MenuItem text="Registrar cliente"/>
+
+                                <MenuItem text="Consultar clientes"/>
+
+                                <SeparatorMenuItem/>
+
+                                <MenuItem text="Salir"/>
+
+                            </items>
+
+                        </Menu>
+
+                        <Menu text="Ayuda">
+
+                            <items>
+
+                                <MenuItem text="Acerca del sistema"/>
+
+                            </items>
+
+                        </Menu>
+
+                    </menus>
+
+                </MenuBar>
+
+                <ToolBar style="-fx-background-color: #ffffff;
+                                -fx-border-color: #d9dee5;
+                                -fx-border-width: 0 0 1 0;
+                                -fx-padding: 8 15 8 15;">
+
+                    <items>
+
+                        <Button text="Registrar cliente"
+                                prefHeight="35.0"
+                                style="-fx-background-color: #0097a7;
+                                       -fx-text-fill: white;
+                                       -fx-font-weight: bold;
+                                       -fx-background-radius: 6;
+                                       -fx-cursor: hand;">
+
+                            <contextMenu>
+
+                                <ContextMenu>
+
+                                    <items>
+
+                                        <MenuItem text="Registrar cliente"/>
+
+                                        <MenuItem text="Consultar clientes"/>
+
+                                        <SeparatorMenuItem/>
+
+                                        <MenuItem text="Salir"/>
+
+                                    </items>
+
+                                </ContextMenu>
+
+                            </contextMenu>
+
+                        </Button>
+
+                        <Button text="Consultar clientes"
+                                prefHeight="35.0"
+                                style="-fx-background-color: #e5e7eb;
+                                       -fx-text-fill: #374151;
+                                       -fx-font-weight: bold;
+                                       -fx-background-radius: 6;
+                                       -fx-cursor: hand;"/>
+
+                    </items>
+
+                </ToolBar>
+
+            </children>
+
+        </VBox>
+
+    </top>
+
+    <center>
+
+        <VBox alignment="CENTER"
+              spacing="25.0">
+
+            <padding>
+                <Insets top="45.0"
+                        right="45.0"
+                        bottom="45.0"
+                        left="45.0"/>
+            </padding>
+
+            <children>
+
+                <Label text="Sistema de gestión de clientes"
+                       style="-fx-font-size: 30px;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #1f2937;"/>
+
+                <Label text="Bienvenido al sistema ClientDesk"
+                       style="-fx-font-size: 16px;
+                              -fx-text-fill: #6b7280;"/>
+
+                <HBox alignment="CENTER"
+                      spacing="20.0">
+
+                    <children>
+
+                        <VBox alignment="CENTER"
+                              spacing="12.0"
+                              prefWidth="260.0"
+                              prefHeight="180.0"
+                              style="-fx-background-color: white;
+                                     -fx-background-radius: 10;
+                                     -fx-border-color: #d9dee5;
+                                     -fx-border-radius: 10;
+                                     -fx-padding: 25;">
+
+                            <children>
+
+                                <Label text="Registro de clientes"
+                                       style="-fx-font-size: 18px;
+                                              -fx-font-weight: bold;
+                                              -fx-text-fill: #1f2937;"/>
+
+                                <Label text="Registrar la información básica de un nuevo cliente."
+                                       wrapText="true"
+                                       textAlignment="CENTER"
+                                       style="-fx-font-size: 13px;
+                                              -fx-text-fill: #6b7280;"/>
+
+                                <Button text="Registrar cliente"
+                                        prefWidth="170.0"
+                                        prefHeight="36.0"
+                                        style="-fx-background-color: #0097a7;
+                                               -fx-text-fill: white;
+                                               -fx-font-weight: bold;
+                                               -fx-background-radius: 6;
+                                               -fx-cursor: hand;"/>
+
+                            </children>
+
+                        </VBox>
+
+                        <VBox alignment="CENTER"
+                              spacing="12.0"
+                              prefWidth="260.0"
+                              prefHeight="180.0"
+                              style="-fx-background-color: white;
+                                     -fx-background-radius: 10;
+                                     -fx-border-color: #d9dee5;
+                                     -fx-border-radius: 10;
+                                     -fx-padding: 25;">
+
+                            <children>
+
+                                <Label text="Consulta de clientes"
+                                       style="-fx-font-size: 18px;
+                                              -fx-font-weight: bold;
+                                              -fx-text-fill: #1f2937;"/>
+
+                                <Label text="Consultar los clientes registrados en el sistema."
+                                       wrapText="true"
+                                       textAlignment="CENTER"
+                                       style="-fx-font-size: 13px;
+                                              -fx-text-fill: #6b7280;"/>
+
+                                <Button text="Consultar clientes"
+                                        prefWidth="170.0"
+                                        prefHeight="36.0"
+                                        style="-fx-background-color: #e5e7eb;
+                                               -fx-text-fill: #374151;
+                                               -fx-font-weight: bold;
+                                               -fx-background-radius: 6;
+                                               -fx-cursor: hand;"/>
+
+                            </children>
+
+                        </VBox>
+
+                    </children>
+
+                </HBox>
+
+                <Label text="Seleccione una opción para comenzar."
+                       style="-fx-font-size: 13px;
+                              -fx-text-fill: #9ca3af;"/>
+
+            </children>
+
+        </VBox>
+
+    </center>
+
+    <bottom>
+
+        <HBox alignment="CENTER_LEFT"
+              spacing="10.0"
+              style="-fx-background-color: #ffffff;
+                     -fx-border-color: #d9dee5;
+                     -fx-border-width: 1 0 0 0;
+                     -fx-padding: 10 18 10 18;">
+
+            <children>
+
+                <Label text="ClientDesk"
+                       style="-fx-font-size: 12px;
+                              -fx-font-weight: bold;
+                              -fx-text-fill: #0097a7;"/>
+
+                <Label text="Sistema de gestión de clientes"
+                       style="-fx-font-size: 12px;
+                              -fx-text-fill: #6b7280;"/>
+
+            </children>
+
+        </HBox>
+
+    </bottom>
+
+</BorderPane>
